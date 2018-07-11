@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B43887F320F613F000D3900E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43887F220F613F000D3900E /* AppDelegate.swift */; };
-		B43887F520F613F000D3900E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43887F420F613F000D3900E /* ViewController.swift */; };
 		B43887F820F613F000D3900E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43887F620F613F000D3900E /* Main.storyboard */; };
 		B43887FA20F613F200D3900E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43887F920F613F200D3900E /* Assets.xcassets */; };
 		B43887FD20F613F200D3900E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43887FB20F613F200D3900E /* LaunchScreen.storyboard */; };
+		B438880520F615E200D3900E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438880420F615E200D3900E /* HomeVC.swift */; };
+		B438880A20F6179000D3900E /* videoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438880920F6179000D3900E /* videoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B43887EF20F613F000D3900E /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43887F220F613F000D3900E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B43887F420F613F000D3900E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B43887F720F613F000D3900E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B43887F920F613F200D3900E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43887FC20F613F200D3900E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43887FE20F613F200D3900E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B438880420F615E200D3900E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B438880920F6179000D3900E /* videoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		B43887F120F613F000D3900E /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				B438880820F6176F00D3900E /* Model */,
+				B438880620F6176200D3900E /* view */,
+				B438880720F6176900D3900E /* Controller */,
 				B43887F220F613F000D3900E /* AppDelegate.swift */,
-				B43887F420F613F000D3900E /* ViewController.swift */,
 				B43887F620F613F000D3900E /* Main.storyboard */,
 				B43887F920F613F200D3900E /* Assets.xcassets */,
 				B43887FB20F613F200D3900E /* LaunchScreen.storyboard */,
 				B43887FE20F613F200D3900E /* Info.plist */,
+				B438880420F615E200D3900E /* HomeVC.swift */,
 			);
 			path = Youtube;
+			sourceTree = "<group>";
+		};
+		B438880620F6176200D3900E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B438880920F6179000D3900E /* videoCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B438880720F6176900D3900E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B438880820F6176F00D3900E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43887F520F613F000D3900E /* ViewController.swift in Sources */,
 				B43887F320F613F000D3900E /* AppDelegate.swift in Sources */,
+				B438880520F615E200D3900E /* HomeVC.swift in Sources */,
+				B438880A20F6179000D3900E /* videoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
