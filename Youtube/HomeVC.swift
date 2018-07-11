@@ -16,6 +16,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         collectionView.delegate = self
         collectionView.dataSource = self
         navigationItem.title = "Home"
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        titleLabel.text = "Home"
+        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        navigationItem.title = titleLabel.text
+        
+        
 
     }
 ///protocol functions
@@ -30,7 +36,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 300)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
