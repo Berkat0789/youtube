@@ -15,6 +15,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var menuBarContainer: UIView!
     
     var selectedMenuItem: String?
+  
+    
+    var allVideos = [
+        
+        Video(thumbNail: "taylor_swift_blank_space", Title: "Taylor Swift - Blank Space", channel: Channel(name: "Kanye Channel", ProfileImage: "kanye_profile"), numberofViews: 12233344),
+        Video(thumbNail: "taylor_swift_bad_blood", Title: "Taylor Swift - Bad Blood featuring Kendrick Lamar",channel: Channel(name: "Kanye Channel", ProfileImage: "kanye_profile"), numberofViews: 123456789)
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +31,25 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         menuCollection.dataSource = self
         menuCollection.delegate = self
         navigationItem.title = "Home"
+        
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
         titleLabel.text = "Home"
         titleLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
+        setupmenuItems()
         
 //        let selectedIndexPath = IndexPath(row: 0, section: 0)
 //        menuCollection.selectItem(at: selectedIndexPath, animated: false, scrollPosition: UICollectionViewScrollPosition.left)
-        
-        //Removes shadow from navigation bar
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
-        
+      
 
+    }
+//Selectors/handlers
+    @objc func handleSearch() {
+        print(123)
+    }
+    @objc func handleMore () {
+        print(234)
     }
 ///protocol functions
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -50,7 +62,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView  == videosColectionView {
             //Video collection
-            return 10
+            return allVideos.count
         } else {
             return MenuData.instance.returnMenuItems().count
         }
@@ -58,6 +70,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == videosColectionView {
             guard let cell = videosColectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as? videoCell else {return UICollectionViewCell()}
+            let video = allVideos[indexPath.row]
+            cell.updateCell(video: video)
             return cell
         } else {
             guard let cell = menuCollection.dequeueReusableCell(withReuseIdentifier: "HomeMenuCell", for: indexPath) as? HomeMenuCell else {return UICollectionViewCell()}
@@ -88,6 +102,16 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             return 0
         }
     }
-    
+    //View funstions
+    func setupmenuItems() {
+        
+        let image: UIImage? = UIImage(named:"search_icon")?.withRenderingMode(.alwaysOriginal)
+        let searchItem = UIBarButtonItem(image: image!, style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleSearch))
+        
+        let moreImage = UIImage(named: "nav_more_icon")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        let moreItem = UIBarButtonItem(image: moreImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleMore))
+        navigationItem.rightBarButtonItems = [moreItem, searchItem]
+
+    }
 
 }

@@ -91,6 +91,12 @@
                                             <constraint firstItem="avH-eM-sDm" firstAttribute="leading" secondItem="QWQ-Ns-sni" secondAttribute="leading" id="tMD-pQ-tDY"/>
                                             <constraint firstItem="cwT-3F-AVX" firstAttribute="top" secondItem="Con-cD-XgP" secondAttribute="bottom" constant="2" id="vUQ-II-9pM"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="channelName" destination="cwT-3F-AVX" id="YeP-KB-zSe"/>
+                                            <outlet property="channelProfileImage" destination="avH-eM-sDm" id="nUm-63-pla"/>
+                                            <outlet property="videoTitle" destination="Con-cD-XgP" id="UbU-9a-zik"/>
+                                            <outlet property="videothumbImage" destination="QWQ-Ns-sni" id="PSd-Um-2Th"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -156,7 +162,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fhq-f9-Z2E"/>
+                    <navigationItem key="navigationItem" id="Fhq-f9-Z2E">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="3Sq-vA-0s9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuBarContainer" destination="9z9-7s-xhc" id="HPJ-Wb-0fH"/>
                         <outlet property="menuCollection" destination="WhF-Nu-P6c" id="g2D-D1-y7M"/>
@@ -175,7 +183,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Pn4-C8-fY3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.93725490199999995" green="0.25490196079999999" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.93828064200000005" green="0.25355291369999999" blue="0.2590637207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>

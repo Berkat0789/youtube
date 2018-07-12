@@ -9,5 +9,19 @@
 import UIKit
 
 class videoCell: UICollectionViewCell {
+    @IBOutlet weak var videothumbImage: UIImageView!
+    @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var channelName: UILabel!
+    @IBOutlet weak var channelProfileImage: roundedImage!
+    
+    func updateCell(video: Video) {
+        self.videoTitle.text = video.videoTitle
+        self.videothumbImage.image = UIImage(named: video.ThumbnailImage!)
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        self.channelName.text = "\(video.videoChannel?.channelName ?? "") • \(video.NumberOfViews ?? 0)"
+        self.channelProfileImage.image = UIImage(named: (video.videoChannel?.channelProfileImage)!)
+    }
     
 }
