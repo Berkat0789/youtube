@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4DI-gr-O16">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="OfA-uc-Quq">
                                     <size key="itemSize" width="375" height="300"/>
@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women" translatesAutoresizingMaskIntoConstraints="NO" id="QWQ-Ns-sni">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taylor_swift_blank_space" translatesAutoresizingMaskIntoConstraints="NO" id="QWQ-Ns-sni">
                                                     <rect key="frame" x="20" y="6" width="335" height="220"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="220" id="43k-2y-tBy"/>
@@ -48,7 +48,7 @@
                                                         <constraint firstAttribute="height" constant="3" id="GOf-ES-tDG"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women" translatesAutoresizingMaskIntoConstraints="NO" id="avH-eM-sDm" customClass="roundedImage" customModule="Youtube" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taylor_swift_profile" translatesAutoresizingMaskIntoConstraints="NO" id="avH-eM-sDm" customClass="roundedImage" customModule="Youtube" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="238" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Hj3-P2-jIj"/>
@@ -94,19 +94,73 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9z9-7s-xhc" customClass="MenuBar" customModule="Youtube" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WhF-Nu-P6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                        <color key="backgroundColor" red="0.93828064200000005" green="0.25355291369999999" blue="0.2590637207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6HX-YJ-jH0">
+                                            <size key="itemSize" width="109" height="46"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeMenuCell" id="i4m-pu-owb" customClass="HomeMenuCell" customModule="Youtube" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.5" width="109" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="109" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending" translatesAutoresizingMaskIntoConstraints="NO" id="cBv-Oj-RVb">
+                                                            <rect key="frame" x="42" y="10.5" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="BUh-qs-Pu7"/>
+                                                                <constraint firstAttribute="height" constant="25" id="n8e-U6-iSC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="cBv-Oj-RVb" firstAttribute="centerX" secondItem="i4m-pu-owb" secondAttribute="centerX" id="Cbe-Lm-hvm"/>
+                                                    <constraint firstItem="cBv-Oj-RVb" firstAttribute="centerY" secondItem="i4m-pu-owb" secondAttribute="centerY" id="FEx-S7-xfk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="menuImage" destination="cBv-Oj-RVb" id="97r-zK-G1C"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.7725490196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3IS-ky-4X5"/>
+                                    <constraint firstAttribute="trailing" secondItem="WhF-Nu-P6c" secondAttribute="trailing" id="WdQ-7x-R3g"/>
+                                    <constraint firstItem="WhF-Nu-P6c" firstAttribute="top" secondItem="9z9-7s-xhc" secondAttribute="top" id="coL-Ee-IFz"/>
+                                    <constraint firstItem="WhF-Nu-P6c" firstAttribute="leading" secondItem="9z9-7s-xhc" secondAttribute="leading" id="dOi-JS-F1G"/>
+                                    <constraint firstAttribute="bottom" secondItem="WhF-Nu-P6c" secondAttribute="bottom" constant="3" id="qnU-KY-PFQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4DI-gr-O16" secondAttribute="bottom" id="6ME-xn-owY"/>
-                            <constraint firstItem="4DI-gr-O16" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="G56-bO-wHI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4DI-gr-O16" secondAttribute="trailing" id="Zku-OG-xfS"/>
-                            <constraint firstItem="4DI-gr-O16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pnh-5q-faI"/>
+                            <constraint firstItem="9z9-7s-xhc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5FX-5w-l3Z"/>
+                            <constraint firstItem="9z9-7s-xhc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6XO-p5-KaO"/>
+                            <constraint firstItem="9z9-7s-xhc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K1b-kh-Vkh"/>
+                            <constraint firstItem="4DI-gr-O16" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ret-3b-yeu"/>
+                            <constraint firstItem="4DI-gr-O16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l08-st-yZU"/>
+                            <constraint firstItem="4DI-gr-O16" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nbx-qt-hBp"/>
+                            <constraint firstItem="4DI-gr-O16" firstAttribute="top" secondItem="9z9-7s-xhc" secondAttribute="bottom" id="qlc-Oh-ajJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fhq-f9-Z2E"/>
                     <connections>
-                        <outlet property="collectionView" destination="4DI-gr-O16" id="2sH-YM-ZWs"/>
+                        <outlet property="menuBarContainer" destination="9z9-7s-xhc" id="HPJ-Wb-0fH"/>
+                        <outlet property="menuCollection" destination="WhF-Nu-P6c" id="g2D-D1-y7M"/>
+                        <outlet property="videosColectionView" destination="4DI-gr-O16" id="qjf-os-0z6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,6 +191,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="women" width="1920" height="1440"/>
+        <image name="taylor_swift_blank_space" width="1280" height="720"/>
+        <image name="taylor_swift_profile" width="101" height="97"/>
+        <image name="trending" width="40" height="40"/>
     </resources>
 </document>

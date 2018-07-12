@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4176D4120F6B319009380BB /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4176D4020F6B319009380BB /* MenuData.swift */; };
+		B4176D4420F6B349009380BB /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4176D4320F6B349009380BB /* MenuItem.swift */; };
+		B4176D4620F6B6E5009380BB /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4176D4520F6B6E5009380BB /* HomeMenuCell.swift */; };
 		B43887F320F613F000D3900E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43887F220F613F000D3900E /* AppDelegate.swift */; };
 		B43887F820F613F000D3900E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43887F620F613F000D3900E /* Main.storyboard */; };
 		B43887FA20F613F200D3900E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43887F920F613F200D3900E /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4176D4020F6B319009380BB /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		B4176D4320F6B349009380BB /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = Youtube/MenuItem.swift; sourceTree = SOURCE_ROOT; };
+		B4176D4520F6B6E5009380BB /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
 		B43887EF20F613F000D3900E /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43887F220F613F000D3900E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43887F720F613F000D3900E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4176D4220F6B323009380BB /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				B4176D4020F6B319009380BB /* MenuData.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		B43887E620F613F000D3900E = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +72,7 @@
 		B43887F120F613F000D3900E /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				B4176D4220F6B323009380BB /* DataService */,
 				B438880820F6176F00D3900E /* Model */,
 				B438880620F6176200D3900E /* view */,
 				B438880720F6176900D3900E /* Controller */,
@@ -66,7 +81,6 @@
 				B43887F920F613F200D3900E /* Assets.xcassets */,
 				B43887FB20F613F200D3900E /* LaunchScreen.storyboard */,
 				B43887FE20F613F200D3900E /* Info.plist */,
-				B438880420F615E200D3900E /* HomeVC.swift */,
 			);
 			path = Youtube;
 			sourceTree = "<group>";
@@ -76,6 +90,7 @@
 			children = (
 				B438880920F6179000D3900E /* videoCell.swift */,
 				B4991CC220F67B43002ACB70 /* roundedImage.swift */,
+				B4176D4520F6B6E5009380BB /* HomeMenuCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -83,6 +98,7 @@
 		B438880720F6176900D3900E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B438880420F615E200D3900E /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,6 +106,7 @@
 		B438880820F6176F00D3900E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4176D4320F6B349009380BB /* MenuItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4176D4420F6B349009380BB /* MenuItem.swift in Sources */,
 				B43887F320F613F000D3900E /* AppDelegate.swift in Sources */,
 				B4991CC320F67B43002ACB70 /* roundedImage.swift in Sources */,
+				B4176D4620F6B6E5009380BB /* HomeMenuCell.swift in Sources */,
 				B438880520F615E200D3900E /* HomeVC.swift in Sources */,
 				B438880A20F6179000D3900E /* videoCell.swift in Sources */,
+				B4176D4120F6B319009380BB /* MenuData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
