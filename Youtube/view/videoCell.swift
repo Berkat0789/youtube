@@ -20,7 +20,7 @@ class videoCell: UICollectionViewCell {
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        self.channelName.text = "\(video.videoChannel?.channelName ?? "") • \(video.NumberOfViews ?? 0)"
+        self.channelName.text = "\(video.videoChannel?.channelName ?? "") • \(numberFormatter.string(from: video.NumberOfViews!) ?? "") • 2 years ago"
         self.channelProfileImage.image = UIImage(named: (video.videoChannel?.channelProfileImage)!)
     }
     

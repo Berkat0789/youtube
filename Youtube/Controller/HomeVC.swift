@@ -39,6 +39,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         navigationItem.titleView = titleLabel
         setupmenuItems()
         
+        Dataservice.instance.fetchVideos { (returnedVideos) in
+            print(returnedVideos.count)
+        }
+        
 //        let selectedIndexPath = IndexPath(row: 0, section: 0)
 //        menuCollection.selectItem(at: selectedIndexPath, animated: false, scrollPosition: UICollectionViewScrollPosition.left)
       
@@ -90,7 +94,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == videosColectionView {
-            return CGSize(width: view.frame.width, height: 300)
+            return CGSize(width: view.frame.width, height: 310)
         } else {
             return CGSize(width: menuBarContainer.frame.width / 4, height: 46)
         }
