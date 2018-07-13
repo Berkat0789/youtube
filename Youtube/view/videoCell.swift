@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class videoCell: UICollectionViewCell {
     @IBOutlet weak var videothumbImage: UIImageView!
@@ -16,12 +17,12 @@ class videoCell: UICollectionViewCell {
     
     func updateCell(video: Video) {
         self.videoTitle.text = video.videoTitle
-        self.videothumbImage.image = UIImage(named: video.ThumbnailImage!)
+        self.videothumbImage.sd_setImage(with: URL(string: video.ThumbnailImage!), placeholderImage: #imageLiteral(resourceName: "taylor_swift_bad_blood"), options: SDWebImageOptions.progressiveDownload, completed: nil)
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         self.channelName.text = "\(video.videoChannel?.channelName ?? "") • \(numberFormatter.string(from: video.NumberOfViews!) ?? "") • 2 years ago"
-        self.channelProfileImage.image = UIImage(named: (video.videoChannel?.channelProfileImage)!)
+        self.channelProfileImage.sd_setImage(with: URL(string: (video.videoChannel?.channelProfileImage)!), placeholderImage: #imageLiteral(resourceName: "kanye_profile"), options: SDWebImageOptions.progressiveDownload, completed: nil)
     }
     
 }

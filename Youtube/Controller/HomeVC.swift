@@ -15,13 +15,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var menuBarContainer: UIView!
     
     var selectedMenuItem: String?
-  
-    
-    var allVideos = [
-        
-        Video(thumbNail: "taylor_swift_blank_space", Title: "Taylor Swift - Blank Space", channel: Channel(name: "Kanye Channel", ProfileImage: "kanye_profile"), numberofViews: 12233344),
-        Video(thumbNail: "taylor_swift_bad_blood", Title: "Taylor Swift - Bad Blood featuring Kendrick Lamar",channel: Channel(name: "Kanye Channel", ProfileImage: "kanye_profile"), numberofViews: 123456789)
-    ]
+    var allVideos = [Video]()
     
     
     override func viewDidLoad() {
@@ -40,7 +34,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         setupmenuItems()
         
         Dataservice.instance.fetchVideos { (returnedVideos) in
-            print(returnedVideos.count)
+            self.allVideos = returnedVideos
+            self.videosColectionView.reloadData()
+            
         }
         
 //        let selectedIndexPath = IndexPath(row: 0, section: 0)
